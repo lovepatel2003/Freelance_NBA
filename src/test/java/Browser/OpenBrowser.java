@@ -10,7 +10,7 @@ public class OpenBrowser {
     RemoteWebDriver driver;
     String browser="chrome";
 
-    @Before
+    //@Before
     public RemoteWebDriver browserOpen(){
 
         if (browser.toLowerCase().equals("chrome")){

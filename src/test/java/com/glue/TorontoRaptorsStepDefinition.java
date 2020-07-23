@@ -18,8 +18,9 @@ public class TorontoRaptorsStepDefinition {
 
     @Given("Go to NBA store")
     public void go_to_NBA_store() {
-        driver.manage().window().maximize();
         driver.get(Constant.nbaStoreURL);
+
+        driver.manage().deleteAllCookies();
 
         String expectedTitle = "NBA Gear, NBA Jerseys | www.nbastore.ca";
         String actualTitle = driver.getTitle();
@@ -30,6 +31,8 @@ public class TorontoRaptorsStepDefinition {
     @Given("Select Toronto Raptors shop for purchase")
     public void select_Toronto_Raptors_shop_for_purchase() {
         objNbaStoreHomePageAnnotaions = new NbaStoreHomePageAnnotations(driver);
+
+        objNbaStoreHomePageAnnotaions.hoverOnWebElementShopByTeam();
 
         String expectedTitle = "Toronto Raptors Gear, Raptors Jerseys, Store, Raptors Pro Shop, Apparel | www.nbastore.ca";
         String actualTitle = objNbaStoreHomePageAnnotaions.clickWebElementTorontoRaptors();

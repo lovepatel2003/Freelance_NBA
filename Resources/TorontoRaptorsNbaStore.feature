@@ -1,7 +1,7 @@
 #@FeatureTags
 Feature: Toronto Raptors store purchase functionality
-# @ScenarioTags
-  Scenario: order 5 merchandise items from Toronto Raptors shop
+#@ScenarioTags
+  Scenario: order 4 merchandise items from Toronto Raptors shop
     Given Go to NBA store
     And Select Toronto Raptors shop for purchase
     When Select men shop for

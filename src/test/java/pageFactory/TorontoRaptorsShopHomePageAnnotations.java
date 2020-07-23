@@ -7,6 +7,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.List;
+
 public class TorontoRaptorsShopHomePageAnnotations {
     private final RemoteWebDriver driver;
 
@@ -14,32 +16,39 @@ public class TorontoRaptorsShopHomePageAnnotations {
         this.driver = driver;
     }
 
-    @FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li[1]/a")
-    WebElement webElementShopForMenRadioButton;
+    //@FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li[1]/a")
+    @FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li")
+    List<WebElement> webElementShopForMenRadioButton;
 
     public String clickWebElementShopForMenRadioButton(){
-        webElementShopForMenRadioButton.click();
+        //Wait.execute(driver, webElementShopForMenRadioButton);
+        //webElementShopForMenRadioButton.click();
+        System.out.println();
         //boolean actualFlag = webElementShopForMenRadioButton.isSelected();
         //return actualFlag;
         String actualTitle = driver.getTitle();
         return actualTitle;
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
-    WebElement webElementMenSizeLButton;
+    //@FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li")
+    List<WebElement> webElementMenSizeLButton;
 
     public void clickWebElementMenSizeLButton(){
-        Wait.execute(driver, webElementMenSizeLButton);
-        webElementMenSizeLButton.click();
+        //Wait.execute(driver, webElementMenSizeLButton);
+        //webElementMenSizeLButton.click();
+        System.out.println();
         //boolean actualFlag = webElementMenSizeLButton.isSelected();
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
-    WebElement webElementTShirtsFeaturedDepartments;
+    //@FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li")
+    List<WebElement> webElementTShirtsFeaturedDepartments;
 
     public void clickWebElementTShirtsFeaturedDepartments(){
-        Wait.execute(driver, webElementTShirtsFeaturedDepartments);
-        webElementTShirtsFeaturedDepartments.click();
+        //Wait.execute(driver, webElementTShirtsFeaturedDepartments);
+        //webElementTShirtsFeaturedDepartments.click();
+        System.out.println();
     }
 
     //Search, Click and Add to cart Item Number 1
