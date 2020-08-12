@@ -9,7 +9,7 @@ public class ChicagoBullsStepDefinition {
 
     @When("Click on the Chicago Bulls store logo")
     public void click_on_the_Chicago_Bulls_store_logo() {
-        objNbaStoreHomePageAnnotations = new NbaStoreHomePageAnnotations(TorontoRaptorsStepDefinition.driver);
+        //objNbaStoreHomePageAnnotations = new NbaStoreHomePageAnnotations(TorontoRaptorsStepDefinition.driver);
         //objNbaStoreHomePageAnnotations.clickWebElementChicagoBulls();
     }
 
