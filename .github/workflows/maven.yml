@@ -5,7 +5,7 @@ name: NBA CI Workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [ ChicagoBulls ]
   pull_request:
     branches: [ master ]
 
