@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -14,41 +15,34 @@ public class TorontoRaptorsShopHomePageAnnotations {
 
     public TorontoRaptorsShopHomePageAnnotations(RemoteWebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
-    //@FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li[1]/a")
-    @FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li")
-    List<WebElement> webElementShopForMenRadioButton;
+    @FindBy(how =How.XPATH, using = "//*[@id='side-nav']/div[2]/div/div[1]/div[2]/ul/li[1]/a")
+    WebElement webElementShopForMenRadioButton;
 
-    public String clickWebElementShopForMenRadioButton(){
-        //Wait.execute(driver, webElementShopForMenRadioButton);
-        //webElementShopForMenRadioButton.click();
-        System.out.println();
-        //boolean actualFlag = webElementShopForMenRadioButton.isSelected();
-        //return actualFlag;
+    public String clickWebElementShopForMenRadioButton() throws InterruptedException {
+        Wait.execute(driver, webElementShopForMenRadioButton);
+        webElementShopForMenRadioButton.click();
+
+        System.out.println(webElementShopForMenRadioButton);
+
         String actualTitle = driver.getTitle();
         return actualTitle;
     }
 
-    //@FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
-    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li")
-    List<WebElement> webElementMenSizeLButton;
+    @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
+    WebElement webElementMenSizeLButton;
 
     public void clickWebElementMenSizeLButton(){
-        //Wait.execute(driver, webElementMenSizeLButton);
-        //webElementMenSizeLButton.click();
-        System.out.println();
-        //boolean actualFlag = webElementMenSizeLButton.isSelected();
+        webElementMenSizeLButton.click();
     }
 
-    //@FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li[3]/a")
     @FindBy(how = How.XPATH, using = "//*[@id='side-nav']/div[2]/div[2]/div[1]/div[2]/ul/li")
-    List<WebElement> webElementTShirtsFeaturedDepartments;
+    WebElement webElementTShirtsFeaturedDepartments;
 
     public void clickWebElementTShirtsFeaturedDepartments(){
-        //Wait.execute(driver, webElementTShirtsFeaturedDepartments);
-        //webElementTShirtsFeaturedDepartments.click();
-        System.out.println();
+        webElementTShirtsFeaturedDepartments.click();
     }
 
     //Search, Click and Add to cart Item Number 1
@@ -68,7 +62,7 @@ public class TorontoRaptorsShopHomePageAnnotations {
         webElementNumber1ItemSizeM.click();
     }
 
-    @FindBy(how = How.XPATH, using = "/html/body/div[2]/div/div[4]/div[2]/div[11]/div/div/div[5]/div/div[2]/div/div/div/button")
+    @FindBy(how = How.XPATH, using = "/html/body/div[2]/div/div[4]/div[2]/div[12]/div/div/div[5]/div/div[2]/div/div/div/button")
     WebElement webElementAddToCart;
 
     public void clickWebElementAddToCart(){
@@ -77,7 +71,7 @@ public class TorontoRaptorsShopHomePageAnnotations {
     }
 
     //Continue Shopping Label
-    @FindBy(how = How.XPATH, using = "")
+    @FindBy(how = How.XPATH, using = "/html/body/div[2]/div/div[4]/div/div[2]/div[2]/div[2]/div/a/span")
     WebElement webElementContinueShoppingLabel;
 
     public void clickWebElementContinueShoppingLabel(){
