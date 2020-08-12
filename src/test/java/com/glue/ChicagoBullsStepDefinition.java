@@ -16,7 +16,7 @@ public class ChicagoBullsStepDefinition {
     @Then("Click any random item for purchase and add to the cart")
     public void click_any_random_item_for_purchase_and_add_to_the_cart() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        throw new io.cucumber.java.PendingException
     }
 
 }
